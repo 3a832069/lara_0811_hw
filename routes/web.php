@@ -16,14 +16,24 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('home',[HomeController::class,'index'])->name('home.index');
-Route::get('about',[HomeController::class,'index'])->name('about.index');
-Route::get('about', function () {
-    return view('about');
-});
-Route::get('news',[HomeController::class,'index'])->name('news.index');
-Route::get('news', function () {
-    return view('news');
-});
+
+
+
+Route::get('home/about',[\App\Http\Controllers\AboutController::class,'index'])->name('about.index');
+
+
+Route::get('home/news',[\App\Http\Controllers\NewsController::class,'index'])->name('news.index');
+;
+
+/*Route::group(['prefix'=>'home'],function(){
+    Route::get('about',function(){
+        return view('about');
+    });
+    Route::get('news',function(){
+        return view('news');
+    });
+});*/
+

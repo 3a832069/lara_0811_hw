@@ -21,8 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-    <a href="{{route('about.index')}}">關於本站</a>
-    <a href="{{route('news.index')}}">最新消息</a>
+    <a href="home/about">關於本站</a>
+    <a href="home/news">最新消息</a>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -59,6 +59,7 @@
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
                                 </div>
+
                             </div>
                         </div>
 
